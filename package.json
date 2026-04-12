@@ -6,9 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "vitest run",
     "lint": "eslint src --ext .ts",
-    "prepare": "npm run build",
     "start:dashboard": "node dist/cli.js"
   },
   "keywords": [
@@ -24,23 +23,16 @@
   ],
   "author": "SuperInstance",
   "license": "MIT",
-  "dependencies": {
-    "ws": "^8.14.0",
-    "uuid": "^9.0.0",
-    "express": "^4.18.2"
-  },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/ws": "^8.5.0",
-    "@types/uuid": "^9.0.0",
     "@types/express": "^4.17.20",
-    "typescript": "^5.0.0",
-    "jest": "^29.0.0",
     "@types/jest": "^29.0.0",
-    "ts-jest": "^29.0.0"
-  },
-  "peerDependencies": {
-    "@superinstance/starter-agent": "^1.0.0"
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.0",
+    "@types/ws": "^8.5.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
   },
   "repository": {
     "type": "git",
@@ -49,5 +41,10 @@
   "bugs": {
     "url": "https://github.com/SuperInstance/Equipment-Monitoring-Dashboard/issues"
   },
-  "homepage": "https://github.com/SuperInstance/Equipment-Monitoring-Dashboard#readme"
+  "homepage": "https://github.com/SuperInstance/Equipment-Monitoring-Dashboard#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "uuid": "^13.0.0",
+    "ws": "^8.20.0"
+  }
 }
